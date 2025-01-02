@@ -12,17 +12,17 @@ changes:
           ray_range: *id001
   system:
     world_cube:
-      compute_from_groundtruth: true
+      compute_from_groundtruth: false
       trajectory_bounding_box:
         x:
-        - -1000
-        - 1000
+        - -100000
+        - 100000
         y:
-        - -1000
-        - 1000
+        - -100000
+        - 100000
         z:
-        - -1000
-        - 1000
+        - -100000
+        - 100000
 dataset: ~/data/KITTI/odometry/dataset/sequences/09/data.bag
 dataset_family: kitti
 experiment_name: kitti_09
