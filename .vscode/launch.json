@@ -6,31 +6,54 @@
   "configurations": [
     {
       "name": "Python: Current File",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
+      "python": "${command:python.interpreterPath}",
       "justMyCode": true
     },
     {
-      "name": "LonerSLAM: Fusion Portable",
-      "type": "python",
+      "name": "LonerSLAM: kitti",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/examples/run_loner.py",
       "console": "integratedTerminal",
-      "args": ["${workspaceFolder}/cfg/fusion_portable/garden.yaml"],
+      "args": ["${workspaceFolder}/cfg/fusion_portable/kitti.yaml"],
       "cwd": "${workspaceFolder}/examples",
+      "python": "${command:python.interpreterPath}",
+      "subProcess": true
+    },
+    {
+      "name": "LonerSLAM: Fusion Portable",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/run_loner.py",
+      "console": "integratedTerminal",
+      "args": ["${workspaceFolder}/cfg/fusion_portable/canteen.yaml"],
+      "cwd": "${workspaceFolder}/examples",
+      "python": "${command:python.interpreterPath}",
       "subProcess": true
     },
     {
       "name": "LonerSLAM: Newer College",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/examples/run_loner.py",
       "console": "integratedTerminal",
       "args": ["${workspaceFolder}/cfg/newer_college/quad.yaml"],
       "cwd": "${workspaceFolder}/examples",
+      "python": "${command:python.interpreterPath}",
       "subProcess": true
+    },
+    {
+      "name": "create_bag",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/kitti/create_bag.py",
+      "console": "integratedTerminal",
+      "python": "${command:python.interpreterPath}",
+      "args": ["--kitti_path", "/home/qzj/data/KITTI/odometry/dataset/sequences/"],
     }
   ]
 }

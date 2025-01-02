@@ -4,5 +4,9 @@
     "/opt/ros/noetic/lib/python3/",
     "/opt/ros/noetic/lib/python3/dist-packages",
     "/opt/conda/lib/python3.8/site-packages"
-  ]
+  ],
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10,
+  "editor.defaultFormatter": "ms-python.python",
 }
