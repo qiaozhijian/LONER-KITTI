@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # DATA_DIR="/home/$USER/Documents/LonerSlamData"
-DATA_DIR="/media/qzj/disk2T-a"
+# DATA_DIR="/media/qzj/disk2T-a"
+DATA_DIR="/data5/public_datasets"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 IMAGE_TAG=loner_slam
