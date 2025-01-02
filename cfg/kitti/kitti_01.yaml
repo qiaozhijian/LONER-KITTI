@@ -1,0 +1,42 @@
+baseline: kitti_settings.yaml
+calibration: null
+changes:
+  mapper:
+    optimizer:
+      model_config:
+        data:
+          ray_range: &id001
+          - 1
+          - 75
+        model:
+          ray_range: *id001
+  system:
+    world_cube:
+      compute_from_groundtruth: true
+      trajectory_bounding_box:
+        x:
+        - -1000
+        - 1000
+        y:
+        - -1000
+        - 1000
+        z:
+        - -1000
+        - 1000
+dataset: ~/data/KITTI/odometry/dataset/sequences/01/data.bag
+dataset_family: kitti
+experiment_name: kitti_01
+groundtruth_traj: ~/data/KITTI/odometry/dataset/sequences/01/ground_truth_traj.txt
+lidar_vertical_fov:
+- -24.8
+- 2.0
+meshing_bounding_box:
+  x:
+  - -35
+  - 25
+  y:
+  - -30
+  - 45
+  z:
+  - -3
+  - 20

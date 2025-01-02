@@ -66,7 +66,7 @@ for experiment_directory in experiment_directories:
     ckpt = torch.load(str(checkpoint_path))
 
     kfs = ckpt["poses"]
-
+    print(f"Loaded {len(kfs)} keyframes")
     gt = []
     tracked = []
     est = []

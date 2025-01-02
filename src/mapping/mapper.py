@@ -175,6 +175,7 @@ class Mapper:
                     'poses': pose_state}
         
     def finish(self):
-
-        print("Saving Last Checkpoint to", f"{self._settings.log_directory}/checkpoints/final.tar")
-        torch.save(self.build_ckpt(), f"{self._settings.log_directory}/checkpoints/final.tar")
+        save_path = os.path.join(self._settings.log_directory, 'checkpoints', 'final.tar')
+        save_path = save_path.replace("//", "/")
+        print("Saving Last Checkpoint to", save_path)
+        torch.save(self.build_ckpt(), save_path)

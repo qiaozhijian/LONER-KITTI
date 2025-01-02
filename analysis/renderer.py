@@ -79,7 +79,6 @@ parser.add_argument("--get_matching_rgb", default=False, action="store_true",
 args = parser.parse_args()
 
 checkpoints = os.listdir(f"{args.experiment_directory}/checkpoints")
-
 if args.ckpt_id is None:
     if "final.tar" in checkpoints:
         checkpoint = "final.tar"

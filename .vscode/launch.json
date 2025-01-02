@@ -54,6 +54,14 @@
       "console": "integratedTerminal",
       "python": "${command:python.interpreterPath}",
       "args": ["--kitti_path", "/home/qzj/data/KITTI/odometry/dataset/sequences/"],
+    },
+    {
+      "name": "generate_kitti_yamls",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/kitti/generate_kitti_yamls.py",
+      "console": "integratedTerminal",
+      "python": "${command:python.interpreterPath}",
     }
   ]
 }

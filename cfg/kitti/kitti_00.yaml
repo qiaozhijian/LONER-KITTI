@@ -1,7 +1,7 @@
 baseline: kitti_settings.yaml
 dataset: ~/data/KITTI/odometry/dataset/sequences/00/data.bag
 calibration: ~
-groundtruth_traj: ~
+groundtruth_traj: ~/data/KITTI/odometry/dataset/sequences/00/ground_truth_traj.txt
 experiment_name: kitti_00
 dataset_family: kitti
 changes:
@@ -9,14 +9,14 @@ changes:
     world_cube:
       compute_from_groundtruth: False
       trajectory_bounding_box:
-        x: [-25, 10]
-        y: [-25, 15]
-        z: [-10, 10]
+        x: [-100000, 100000]
+        y: [-100000, 100000]
+        z: [-100000, 100000]
   mapper:
     optimizer:
       model_config:
         data:
-          ray_range: &ray_range [1, 50]
+          ray_range: &ray_range [1, 75]
         model:
           ray_range: *ray_range
 
